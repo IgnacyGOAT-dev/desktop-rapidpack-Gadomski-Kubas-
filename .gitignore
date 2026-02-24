@@ -33,5 +33,5 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-RapidPack/obj/
-RapidPack.Test/obj/
+**/RapidPack/obj/
+**/RapidPack.Test/obj/
