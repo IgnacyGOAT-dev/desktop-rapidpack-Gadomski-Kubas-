@@ -2,8 +2,53 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400"
         x:Class="RapidPack.MainWindow"
-        Title="RapidPack">
-    
+        Title="RapidPack, Ignacy + Maciej"
+        Width="400" Height="400"
+        CanResize="False"
+        >
+        <Grid RowDefinitions="* * * * *">
+                <TextBlock HorizontalAlignment="Center" Padding="0 20">Wyceń cenę paczki</TextBlock>
+                
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center">Waga Paczki:</TextBlock>
+                <NumericUpDown Grid.Row="1" Height="20" Width="200" x:Name="WeightTextBox" Minimum="0" ShowButtonSpinner="False"></NumericUpDown>
+                
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top">Wymiary Paczki:</TextBlock>
+                <WrapPanel Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                        <StackPanel Margin="20 0">
+                                <TextBlock>Wysokość</TextBlock>
+                                <TextBox x:Name="HeightTextBox" Margin="0 10 0 0"></TextBox>
+                        </StackPanel>
+                        <StackPanel Margin="20 0">
+                                <TextBlock>Szerokość</TextBlock>
+                                <TextBox x:Name="WidthTextBox" Margin="0 10 0 0"></TextBox>
+                        </StackPanel>
+                        <StackPanel Margin="20 0">
+                                <TextBlock>Głębokość</TextBlock>
+                                <TextBox x:Name="DepthTextBox" Margin="0 10 0 0"></TextBox>
+                        </StackPanel>
+                </WrapPanel>
+                
+                <StackPanel Grid.Row="3" HorizontalAlignment="Center" Margin="0 20">
+                        <TextBlock HorizontalAlignment="Center">Usługi dotatkowe</TextBlock>
+                        <WrapPanel HorizontalAlignment="Center" Margin="0 0">
+                                <StackPanel HorizontalAlignment="Left">
+                                        <TextBlock HorizontalAlignment="Left">Ekspres</TextBlock>
+                                        <CheckBox x:Name="ExpressCheckBox" HorizontalAlignment="Center"></CheckBox>
+                                </StackPanel>
+                                
+                                <StackPanel HorizontalAlignment="Right" Margin="20 0">
+                                        <TextBlock HorizontalAlignment="Right">Typ Przesyłki</TextBlock>
+                                        <ComboBox HorizontalAlignment="Center">
+                                                <ComboBoxItem x:Name="StandardItem">Standardowa</ComboBoxItem>
+                                                <ComboBoxItem x:Name="CarefulItem">Ostrożnie</ComboBoxItem>
+                                                <ComboBoxItem x:Name="PaletaItem">Paleta</ComboBoxItem>
+                                        </ComboBox>
+                                </StackPanel>
+                        </WrapPanel>
+                </StackPanel>
+                
+                <Button Grid.Row="4" HorizontalAlignment="Center">Oblicz</Button>
+        </Grid>
 </Window>
