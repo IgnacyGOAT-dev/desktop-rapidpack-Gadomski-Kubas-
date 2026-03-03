@@ -8,13 +8,13 @@
         Width="400" Height="400"
         CanResize="False"
         >
-        <Grid RowDefinitions="* * * *">
+        <Grid RowDefinitions="* * * * *">
                 <TextBlock HorizontalAlignment="Center" Padding="0 20">Wyceń cenę paczki</TextBlock>
                 
                 <TextBlock Grid.Row="1" HorizontalAlignment="Center">Waga Paczki:</TextBlock>
                 <NumericUpDown Grid.Row="1" Height="20" Width="200" x:Name="WeightTextBox" Minimum="0" ShowButtonSpinner="False"></NumericUpDown>
                 
-                <TextBlock Grid.Row="2" HorizontalAlignment="Center" Padding="0 20">Wymiary Paczki:</TextBlock>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top">Wymiary Paczki:</TextBlock>
                 <WrapPanel Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
                         <StackPanel Margin="20 0">
                                 <TextBlock>Wysokość</TextBlock>
@@ -30,6 +30,25 @@
                         </StackPanel>
                 </WrapPanel>
                 
-                <Button Grid.Row="3" HorizontalAlignment="Center">Oblicz</Button>
+                <StackPanel Grid.Row="3" HorizontalAlignment="Center" Margin="0 20">
+                        <TextBlock HorizontalAlignment="Center">Usługi dotatkowe</TextBlock>
+                        <WrapPanel HorizontalAlignment="Center" Margin="0 0">
+                                <StackPanel HorizontalAlignment="Left">
+                                        <TextBlock HorizontalAlignment="Left">Ekspres</TextBlock>
+                                        <CheckBox x:Name="ExpressCheckBox" HorizontalAlignment="Center"></CheckBox>
+                                </StackPanel>
+                                
+                                <StackPanel HorizontalAlignment="Right" Margin="20 0">
+                                        <TextBlock HorizontalAlignment="Right">Typ Przesyłki</TextBlock>
+                                        <ComboBox HorizontalAlignment="Center">
+                                                <ComboBoxItem x:Name="StandardItem">Standardowa</ComboBoxItem>
+                                                <ComboBoxItem x:Name="CarefulItem">Ostrożnie</ComboBoxItem>
+                                                <ComboBoxItem x:Name="PaletaItem">Paleta</ComboBoxItem>
+                                        </ComboBox>
+                                </StackPanel>
+                        </WrapPanel>
+                </StackPanel>
+                
+                <Button Grid.Row="4" HorizontalAlignment="Center">Oblicz</Button>
         </Grid>
 </Window>
