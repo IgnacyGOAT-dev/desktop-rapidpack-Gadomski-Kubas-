@@ -2,8 +2,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400"
         x:Class="RapidPack.MainWindow"
-        Title="RapidPack">
-    
+        Title="RapidPack, Ignacy + Maciej"
+        Width="400" Height="400"
+        >
+        <Grid RowDefinitions="* * * *">
+                <TextBlock HorizontalAlignment="Center" Padding="0 20">Wyceń cenę paczki</TextBlock>
+                
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center">Waga Paczki:</TextBlock>
+                <TextBox Grid.Row="1" Height="20" Width="100" x:Name="WeightTextBox"></TextBox>
+                
+                <Button Grid.Row="3" HorizontalAlignment="Center">Oblicz</Button>
+        </Grid>
 </Window>
