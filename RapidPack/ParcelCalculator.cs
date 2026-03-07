@@ -34,7 +34,7 @@ public class ParcelCalculator
             return "Nieznany typ przesyłki!";
         }
         double price;
-        int dimensionsSum = parcelHeight + parcelWeight + parcelDepth;
+        int dimensionsSum = parcelHeight + parcelWidth + parcelDepth;
 
         if (deliveryChoice == "Paleta")
         {
@@ -59,6 +59,12 @@ public class ParcelCalculator
         {
             price += 15;
         }
-
+        return "Podsumowanie wyceny:\n"
+               + $"Wymiary: {parcelHeight} x {parcelWidth} x {parcelDepth} cm\n"
+               + $"Suma wymiarów: {dimensionsSum} cm\n"
+               + $"Waga: {parcelWeight} kg\n"
+               + $"Typ przesyłki: {deliveryChoice}\n"
+               + $"Ekspres: {(express ? "Tak" : "Nie")}\n"
+               + $"Cena końcowa: {price:F2} zł";
     }
 }

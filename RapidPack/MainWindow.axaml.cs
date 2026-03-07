@@ -12,7 +12,7 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    private void QuoteButton_Click(object? sender, RoutedEventArgs e)
+    private void QuoteButtonClick(object? sender, RoutedEventArgs e)
     {
 
         if (!int.TryParse(HeightTextBox.Text, out int height))

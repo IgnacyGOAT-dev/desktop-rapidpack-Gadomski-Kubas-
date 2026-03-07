@@ -49,7 +49,7 @@
                         </WrapPanel>
                 </StackPanel>
                 
-                <Button Grid.Row="4" x:Name="ButtonOblicz" HorizontalAlignment="Center">Oblicz</Button>
+                <Button Grid.Row="4" x:Name="ButtonOblicz" Click="QuoteButtonClick" HorizontalAlignment="Center">Oblicz</Button>
                 <TextBlock Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" x:Name="OutputTextBlock" />
         </Grid>
 </Window>
