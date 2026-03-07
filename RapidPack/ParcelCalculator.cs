@@ -23,12 +23,12 @@ public class ParcelCalculator
         {
             return "Waga musi być większa od 0!";
         }
-
+        
         if (parcelWeight > 30)
         {
             return "Waga przesyłki nie może przekraczać 30 kg!";
         }
-
+        
         if (deliveryChoice != "Standardowa" && deliveryChoice != "Ostrożnie" && deliveryChoice != "Paleta")
         {
             return "Nieznany typ przesyłki!";

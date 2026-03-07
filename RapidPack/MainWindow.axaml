@@ -40,7 +40,7 @@
                                 
                                 <StackPanel HorizontalAlignment="Right" Margin="20 0">
                                         <TextBlock HorizontalAlignment="Right">Typ Przesyłki</TextBlock>
-                                        <ComboBox HorizontalAlignment="Center">
+                                        <ComboBox x:Name="ComboBox" HorizontalAlignment="Center">
                                                 <ComboBoxItem x:Name="StandardItem">Standardowa</ComboBoxItem>
                                                 <ComboBoxItem x:Name="CarefulItem">Ostrożnie</ComboBoxItem>
                                                 <ComboBoxItem x:Name="PaletaItem">Paleta</ComboBoxItem>
@@ -49,6 +49,7 @@
                         </WrapPanel>
                 </StackPanel>
                 
-                <Button Grid.Row="4" HorizontalAlignment="Center">Oblicz</Button>
+                <Button Grid.Row="4" x:Name="ButtonOblicz" HorizontalAlignment="Center">Oblicz</Button>
+                <TextBlock Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" x:Name="OutputTextBlock" />
         </Grid>
 </Window>
