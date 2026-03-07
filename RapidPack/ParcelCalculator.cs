@@ -33,6 +33,32 @@ public class ParcelCalculator
         {
             return "Nieznany typ przesyłki!";
         }
-        
+        double price;
+        int dimensionsSum = parcelHeight + parcelWeight + parcelDepth;
+
+        if (deliveryChoice == "Paleta")
+        {
+            price = 100;
+        }
+        else
+        {
+            price = 10 + (parcelWeight * 2); 
+
+            if (deliveryChoice == "Ostrożnie")
+            {
+                price += 10;
+            }
+
+            if (dimensionsSum > 150)
+            {
+                price *= 1.5;
+            }
+        }
+
+        if (express)
+        {
+            price += 15;
+        }
+
     }
 }

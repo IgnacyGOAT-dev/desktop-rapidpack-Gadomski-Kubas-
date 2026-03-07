@@ -33,6 +33,12 @@ public partial class MainWindow : Window
             return;
         }
         
-       
+        int weight = (int)WeightTextBox.Value;
+
+        var selectedItem = ComboBox.SelectedItem as ComboBoxItem;
+        string shipmentType = selectedItem?.Content?.ToString() ?? "Standardowa";
+        bool express = ExpressCheckBox.IsChecked == true;
+
+        OutputTextBlock.Text = _parcelCalculator.CalculatePrice(height, width, depth, weight, express, shipmentType);
     }
 }
