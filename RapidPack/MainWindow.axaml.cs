@@ -34,6 +34,6 @@ public partial class MainWindow : Window
         string shipmentType = selectedItem?.Content?.ToString() ?? "Standardowa";
         bool express = ExpressCheckBox.IsChecked == true;
 
-        OutputTextBlock.Text = _parcelCalculator.CalculatePrice(height, width, depth, weight, express, shipmentType);
+        OutputTextBlock.Text = _parcelCalculator.CalculatePrice(height, width, depth, weight, express, shipmentType).Item1;
     }
 }
